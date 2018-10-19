@@ -18,7 +18,7 @@ RUN set -ex ; \
     wget --no-check-certificate -O - https://github.com/SoftEtherVPN/SoftEtherVPN/archive/${SOFTETHER_VERSION}.tar.gz | tar xzf - ; \
     cd SoftEtherVPN-${SOFTETHER_VERSION:1} ; \
     # Patching sources
-    for file in /assets/patchs/*.sh; do /bin/sh "$file"; done ; \
+    # for file in /assets/patchs/*.sh; do /bin/sh "$file"; done ; \
     # Compile and Install
     cp src/makefiles/linux_64bit.mak Makefile ; \
     make ; make install ; make clean ; \
