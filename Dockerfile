@@ -4,7 +4,7 @@ LABEL maintainer="Antoine Mary <antoinee.mary@gmail.com>" \
 
 ### SET ENVIRONNEMENT
 ENV LANG="en_US.UTF-8" \
-    SOFTETHER_VERSION="v4.22-9634-beta"
+    SOFTETHER_VERSION="v5.01.9660"
 
 ### SETUP
 COPY assets /assets
@@ -35,7 +35,7 @@ RUN set -ex ; \
     cd .. ; \
       /assets SoftEtherVPN-${SOFTETHER_VERSION:1} ;
 
-EXPOSE 443/tcp 992/tcp 1194/udp 5555/tcp
+EXPOSE 443/tcp 992/tcp 1194/udp 5555/tcp 9930/tcp
 
 VOLUME ["/etc/vpnserver", "/var/log/vpnserver"]
 
