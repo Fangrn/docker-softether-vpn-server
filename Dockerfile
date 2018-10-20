@@ -15,7 +15,7 @@ RUN set -ex ; \
     mv /assets/entrypoint.sh / ; chmod +x /entrypoint.sh ; \
 
     # Fetch sources
-    wget --no-check-certificate -O - https://github.com/SoftEtherVPN/SoftEtherVPN/archive/${SOFTETHER_VERSION}.tar.gz | tar xzf - ; \
+    wget --no-check-certificate -O - https://github.com/Fangrn/SoftEtherVPN/archive/${SOFTETHER_VERSION}.tar.gz | tar xzf - ; \
     cd SoftEtherVPN-${SOFTETHER_VERSION:1} ; \
     # Patching sources
     # for file in /assets/patchs/*.sh; do /bin/sh "$file"; done ; \
